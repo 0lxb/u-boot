@@ -199,6 +199,13 @@
 };
 #endif
 
+&usbotg_hs {
+	u-boot,force-b-session-valid;
+	hnp-srp-disable;
+	/* TEMP: force peripheral for USB OTG */
+	dr_mode = "peripheral";
+};
+
 &uart4 {
 	u-boot,dm-pre-reloc;
 };
